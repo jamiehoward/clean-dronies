@@ -4,8 +4,9 @@
             @click="setWinnerAndLoser(dronie)"
             :dronie="dronie"
             v-for="dronie in dronies"
-            :key="dronie.id">
-            <img v-if="dronie" class="cursor-pointer border-green-300 border-solid border shadow-lg hover:scale-105 transition transform" v-bind:src="dronie.image" width="250px"/>
+            :key="dronie.id"
+            class="hover:scale-105 transition transform dronie-card">
+            <img v-if="dronie" class="cursor-pointer border-green-300 border-solid border" v-bind:src="dronie.image" width="250px"/>
             <div>#{{dronie.nft_id}}</div>
         </div>
     </div>

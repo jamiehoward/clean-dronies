@@ -2113,35 +2113,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingItem.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingItem.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['dronie'],
-  methods: {}
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingList.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingList.vue?vue&type=script&lang=js& ***!
@@ -2153,6 +2124,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -52857,45 +52829,6 @@ component.options.__file = "resources/js/components/DronieLeaderboard.vue"
 
 /***/ }),
 
-/***/ "./resources/js/components/DronieVotingItem.vue":
-/*!******************************************************!*\
-  !*** ./resources/js/components/DronieVotingItem.vue ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _DronieVotingItem_vue_vue_type_template_id_1ce33924___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DronieVotingItem.vue?vue&type=template&id=1ce33924& */ "./resources/js/components/DronieVotingItem.vue?vue&type=template&id=1ce33924&");
-/* harmony import */ var _DronieVotingItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DronieVotingItem.vue?vue&type=script&lang=js& */ "./resources/js/components/DronieVotingItem.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _DronieVotingItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _DronieVotingItem_vue_vue_type_template_id_1ce33924___WEBPACK_IMPORTED_MODULE_0__.render,
-  _DronieVotingItem_vue_vue_type_template_id_1ce33924___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/DronieVotingItem.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/DronieVotingList.vue":
 /*!******************************************************!*\
   !*** ./resources/js/components/DronieVotingList.vue ***!
@@ -52951,22 +52884,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/DronieVotingItem.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/DronieVotingItem.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DronieVotingItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DronieVotingItem.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingItem.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DronieVotingItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/components/DronieVotingList.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/DronieVotingList.vue?vue&type=script&lang=js& ***!
@@ -52996,23 +52913,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DronieLeaderboard_vue_vue_type_template_id_020333ce___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DronieLeaderboard_vue_vue_type_template_id_020333ce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DronieLeaderboard.vue?vue&type=template&id=020333ce& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieLeaderboard.vue?vue&type=template&id=020333ce&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/DronieVotingItem.vue?vue&type=template&id=1ce33924&":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/components/DronieVotingItem.vue?vue&type=template&id=1ce33924& ***!
-  \*************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DronieVotingItem_vue_vue_type_template_id_1ce33924___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DronieVotingItem_vue_vue_type_template_id_1ce33924___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DronieVotingItem_vue_vue_type_template_id_1ce33924___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DronieVotingItem.vue?vue&type=template&id=1ce33924& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingItem.vue?vue&type=template&id=1ce33924&");
 
 
 /***/ }),
@@ -53084,75 +52984,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingItem.vue?vue&type=template&id=1ce33924&":
-/*!****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingItem.vue?vue&type=template&id=1ce33924& ***!
-  \****************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm.dronie
-      ? _c("img", {
-          staticClass:
-            "cursor-pointer border-green-300 border-solid border shadow-lg hover:scale-105 transition transform",
-          attrs: { src: _vm.dronie.image, width: "250px" },
-        })
-      : _vm._e(),
-    _vm._v(" "),
-    _c("div", [_vm._v("#" + _vm._s(_vm.dronie.nft_id))]),
-    _vm._v(" "),
-    !_vm.dronie
-      ? _c(
-          "svg",
-          {
-            staticClass: "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
-            attrs: {
-              xmlns: "http://www.w3.org/2000/svg",
-              fill: "none",
-              viewBox: "0 0 24 24",
-            },
-          },
-          [
-            _c("circle", {
-              staticClass: "opacity-25",
-              attrs: {
-                cx: "12",
-                cy: "12",
-                r: "10",
-                stroke: "currentColor",
-                "stroke-width": "4",
-              },
-            }),
-            _vm._v(" "),
-            _c("path", {
-              staticClass: "opacity-75",
-              attrs: {
-                fill: "currentColor",
-                d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z",
-              },
-            }),
-          ]
-        )
-      : _vm._e(),
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingList.vue?vue&type=template&id=08d8490e&":
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DronieVotingList.vue?vue&type=template&id=08d8490e& ***!
@@ -53177,6 +53008,7 @@ var render = function () {
         "div",
         {
           key: dronie.id,
+          staticClass: "hover:scale-105 transition transform dronie-card",
           attrs: { dronie: dronie },
           on: {
             click: function ($event) {
@@ -53188,7 +53020,7 @@ var render = function () {
           dronie
             ? _c("img", {
                 staticClass:
-                  "cursor-pointer border-green-300 border-solid border shadow-lg hover:scale-105 transition transform",
+                  "cursor-pointer border-green-300 border-solid border",
                 attrs: { src: dronie.image, width: "250px" },
               })
             : _vm._e(),
@@ -85835,7 +85667,6 @@ Vue.compile = compileToFunctions;
 
 var map = {
 	"./components/DronieLeaderboard.vue": "./resources/js/components/DronieLeaderboard.vue",
-	"./components/DronieVotingItem.vue": "./resources/js/components/DronieVotingItem.vue",
 	"./components/DronieVotingList.vue": "./resources/js/components/DronieVotingList.vue"
 };
 
