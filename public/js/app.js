@@ -2145,7 +2145,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       dronies: [],
       winner: {},
-      loser: {}
+      loser: {},
+      attribute: 'clean'
     };
   },
   mounted: function mounted() {
@@ -2181,7 +2182,8 @@ __webpack_require__.r(__webpack_exports__);
       var self = this;
       axios.post('/api/dronie-votes', {
         winner_id: this.winner.id,
-        loser_id: this.loser.id
+        loser_id: this.loser.id,
+        attribute: this.attribute
       }).then(function (response) {
         self.getDronies();
 

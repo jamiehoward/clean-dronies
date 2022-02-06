@@ -35,7 +35,7 @@
                         {{config('app.name')}}
                     </a>
                 </div>
-                <div class="uppercase text-green-400 text-sm">Total votes: {{$totalVotes}}</div>
+                <div class="uppercase text-green-400 text-sm">Total Votes: {{$totalVotes}}</div>
                 <div><strike class="cursor-not-allowed">Connect Wallet</strike></div>
             </nav>
 

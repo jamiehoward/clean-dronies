@@ -10,4 +10,14 @@ class Vote extends Model
     use HasFactory;
 
     public $guarded = [];
+
+    public function winner()
+    {
+        return $this->belongsTo(Dronie::class, 'winner_id');
+    }
+
+    public function loser()
+    {
+        return $this->belongsTo(Dronie::class, 'loser_id');
+    }
 }

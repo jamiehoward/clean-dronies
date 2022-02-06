@@ -21,6 +21,7 @@
                 dronies: [],
                 winner: {},
                 loser: {},
+                attribute: 'clean'
             }
         },
         mounted() {
@@ -54,7 +55,8 @@
                 const self = this
                 axios.post('/api/dronie-votes', {
                     winner_id: this.winner.id,
-                    loser_id: this.loser.id
+                    loser_id: this.loser.id,
+                    attribute: this.attribute
                 })
                     .then(response => {
                         self.getDronies()

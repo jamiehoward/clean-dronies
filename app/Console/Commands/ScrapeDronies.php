@@ -41,7 +41,7 @@ class ScrapeDronies extends Command
     {
         $this->info("Scraping all dronies...");
 
-        for ($i = 1; $i <= self::COLLECTION_COUNT; $i++) {
+        for ($i = 8794; $i <= self::COLLECTION_COUNT; $i++) {
             try {
                 $alreadyScraped = \App\Models\Dronie::where('nft_id', $i)->first();
 
@@ -53,7 +53,7 @@ class ScrapeDronies extends Command
                 $this->call('scrape:single-dronie', ['id' => $i]);
             } catch (\Exception $e) {
                 $this->error("Error scraping dronie #$i: " . $e->getMessage());
-                sleep(5);
+                sleep(1);
             }
 
             sleep(1);

@@ -41,10 +41,13 @@ class DronieVoteController extends Controller
         $loser = \App\Models\Dronie::find($request->loser_id);
 
         if ($winner && $loser) {
-            $winner->clean_score += 0.01;
-            $loser->clean_score -= 0.01;
-            $winner->save();
-            $loser->save();
+            $vote = \App\Models\Vote::create([
+                'winner_id' => $winner->id,
+                'loser_id' => $loser->id,
+                'attribute' => $request->attribute,
+            ]);
+
+            return response($vote);
         }
     }
 
