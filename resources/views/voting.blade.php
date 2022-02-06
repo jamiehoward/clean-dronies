@@ -30,7 +30,7 @@
         <div class="w-full" id="app">
 
             <nav class="text-white  p-4 flex justify-between">
-                <div class="font-bold">
+                <div class="font-bold uppercase">
                     <a href="/" class="hover:text-green-300 transition ease-in-out">
                         {{config('app.name')}}
                     </a>
