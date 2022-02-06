@@ -9,7 +9,11 @@ class DronieLeaderController extends Controller
 {
     public function index()
     {
-        $leaders =  Dronie::get()->sortByDesc('clean_score')->take(3);
+        // Sort by dronies with the highest number of winning votes
+        $leaders = \App\Models\Dronie::withCount('winningVotes')
+            ->orderBy('winning_votes_count', 'desc')
+            ->get()
+            ->take(3);
 
         return response($leaders);
     }
