@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('voting');
+    $data = [
+        'totalVotes' => \App\Models\Dronie::where('clean_score', '!=', 0)->get()->count(),
+    ];
+
+    return view('voting', $data);
 });
