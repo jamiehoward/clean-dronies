@@ -12,13 +12,16 @@ class DronieLeaderController extends Controller
     {
         // Sort by dronies with the highest number of winning votes
 
-        $leaders = Cache::remember('leaderboard', 120, function() {
-            return \App\Models\Dronie::withCount('winningVotes')
-                ->orderBy('winning_votes_count', 'desc')
-                ->get()
-                ->take(3)
-                ->reverse();
-        });
+        // votes grouped by winner_id
+        $votes = \App\Models\Vote::groupBy('winner_id')
+            ->selectRaw('winner_id, count(*) as count')
+            ->orderBy('count', 'desc')
+            ->get()
+            ->take(3)
+            ->pluck('winner_id');
+
+        $leaders = Dronie::whereIn('id', $votes)
+            ->get();
 
         return response($leaders);
     }
