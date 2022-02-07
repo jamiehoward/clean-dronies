@@ -14,7 +14,11 @@ class DronieVoteController extends Controller
      */
     public function index()
     {
-        $dronies = \App\Models\Dronie::where('attribute_count', '<', 8)->get()->shuffle()->take(2);
+        $dronies = \App\Models\Dronie::where('attribute_count', '<', 8)
+            ->where('elite_prototype', '=', 'None')
+            ->get()
+            ->shuffle()
+            ->take(2);
 
         return response($dronies);
     }
