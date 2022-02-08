@@ -47,8 +47,8 @@
 
             <dronie-leaderboard></dronie-leaderboard>
             
-            <div class="text-white text-center mt-8">
-                Made with <span class="text-red-500">❤</span> by <a href="https://twitter.com/intent/follow?screen_name=JamieHoward" target="_blank" class="text-red-500">@JamieHoward</a>
+            <div class="text-white text-center mt-8 text-sm">
+                Want to be notified of updates? Follow <a href="https://twitter.com/intent/follow?screen_name=JamieHoward" target="_blank" class="text-red-500">@JamieHoward</a> on Twitter.
             </div>
         </div>
 
