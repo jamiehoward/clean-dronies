@@ -20,7 +20,8 @@ class TopDronieController extends Controller
 
         // Cache the response so it's quicker to load
         $topDronies = Cache::remember('topDronies', now()->addMinutes(15), function () {
-            return TopDronie::get()
+            return TopDronie::with('dronie')
+            ->get()
             ->sortByDesc('clean_score')
             ->reject(function ($topDronie) {
                 return $topDronie->dronie->elite_prototype != 'None';
