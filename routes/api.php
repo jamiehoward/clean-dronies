@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('dronie-votes', 'App\Http\Controllers\DronieVoteController');
 Route::resource('leaders', 'App\Http\Controllers\DronieLeaderController');
+
+Route::get('votes/total', 'App\Http\Controllers\DronieVoteController@totalVotes');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDronieRequest;
 use App\Http\Requests\UpdateDronieRequest;
 use App\Models\Dronie;
+use Illuminate\Support\Facades\Cache;
 
 class DronieController extends Controller
 {
@@ -15,7 +16,16 @@ class DronieController extends Controller
      */
     public function index()
     {
-        //
+        // Get the top 50 dronies with the highest number of winning votes
+        $dronies = Cache::remember('dronies', now()->addMinutes(5), function () {
+            return Dronie::withCount('winningVotes')
+                ->with('winningVotes')
+                ->orderBy('winning_votes_count', 'desc')
+                ->take(50)
+                ->get();
+        });
+
+        return view('dronies.index', compact('dronies'));
     }
 
     /**

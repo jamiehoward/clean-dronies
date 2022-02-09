@@ -20,3 +20,5 @@ Route::get('/', function () {
 
     return view('voting', $data);
 });
+
+Route::resource('dronies', 'App\Http\Controllers\DronieController');

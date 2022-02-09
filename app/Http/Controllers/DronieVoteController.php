@@ -55,6 +55,13 @@ class DronieVoteController extends Controller
         }
     }
 
+    public function totalVotes()
+    {
+        $votes = \App\Models\Vote::count();
+
+        return response($votes);
+    }
+
     /**
      * Display the specified resource.
      *
