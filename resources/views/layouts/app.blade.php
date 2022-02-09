@@ -45,6 +45,11 @@
                         {{config('app.name')}}
                     </a>
                 </div>
+                <div>
+                    <a href="{{route('top-dronies.index')}}" class="hover:text-green-300 transition ease-in-out">
+                        Top 50
+                    </a>
+                </div>
                 <total-votes></total-votes>
                 {{-- <div><strike class="cursor-not-allowed">Connect Wallet</strike></div> --}}
             </nav>
