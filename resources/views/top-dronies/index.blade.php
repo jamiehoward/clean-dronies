@@ -16,6 +16,7 @@
                     <th>Image</th>
                     <th>Clean Score</th>
                     <th>Total Votes</th>
+                    <th>Winning %</th>
                     <th>Rarity Ranking</th>
                 </tr>
             </thead>
@@ -38,6 +39,9 @@
                 </td>
                 <td>
                     {{ $topDronie->total_votes }}
+                </td>
+                <td>
+                    {{ $topDronie->win_percentage }}%
                 </td>
                 <td>
                     {{ $topDronie->dronie->rank }}
