@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dronie;
+use App\Models\TopDronie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -13,15 +14,16 @@ class DronieLeaderController extends Controller
         // Sort by dronies with the highest number of winning votes
 
         // votes grouped by winner_id
-        $votes = \App\Models\Vote::groupBy('winner_id')
-            ->selectRaw('winner_id, count(*) as count')
-            ->orderBy('count', 'desc')
+        $leaders = Cache::remember('top_leaders', now()->addMinutes(15), function () {
+            return TopDronie::with('dronie')
+            ->orderBy('clean_score', 'desc')
+            ->orderBy('win_percentage', 'desc')
             ->get()
-            ->take(3)
-            ->pluck('winner_id');
-
-        $leaders = Dronie::whereIn('id', $votes)
-            ->get();
+            ->reject(function ($topDronie) {
+                return $topDronie->dronie->elite_prototype != 'None';
+            })
+            ->take(3);
+        });
 
         return response($leaders);
     }

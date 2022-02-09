@@ -3,11 +3,11 @@
         <div class="mb-4 uppercase font-bold">The top cleanest:</div>
             <div class="flex justify-center gap-4">
                 <div v-for="leader in leaders" :key="leader.id">
-                    <a v-bind:href="leader.url" target="_blank">
-                        <img v-bind:src="leader.image" class="w-24"/>
+                    <a v-bind:href="leader.dronie.url" target="_blank">
+                        <img v-bind:src="leader.dronie.image" class="w-24"/>
                     </a>
                     <div>
-                        {{leader.clean_score}}
+                        {{leader.clean_score}}.00
                     </div>
                 </div>
             </div>

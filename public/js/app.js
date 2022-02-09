@@ -53078,15 +53078,18 @@ var render = function () {
       { staticClass: "flex justify-center gap-4" },
       _vm._l(_vm.leaders, function (leader) {
         return _c("div", { key: leader.id }, [
-          _c("a", { attrs: { href: leader.url, target: "_blank" } }, [
-            _c("img", { staticClass: "w-24", attrs: { src: leader.image } }),
+          _c("a", { attrs: { href: leader.dronie.url, target: "_blank" } }, [
+            _c("img", {
+              staticClass: "w-24",
+              attrs: { src: leader.dronie.image },
+            }),
           ]),
           _vm._v(" "),
           _c("div", [
             _vm._v(
               "\n                    " +
                 _vm._s(leader.clean_score) +
-                "\n                "
+                ".00\n                "
             ),
           ]),
         ])
