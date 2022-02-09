@@ -13,6 +13,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        @if (config('app.env') !== 'local')
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMB284K0DR"></script>
         <script>
@@ -30,6 +31,7 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-MC9M7D8');</script>
         <!-- End Google Tag Manager -->
+        @endif
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
