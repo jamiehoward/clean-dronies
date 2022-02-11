@@ -4,7 +4,7 @@
 
     <div class="mx-auto text-green-300 md:w-1/2 mt-16 text-center p-4 md:p-8">
         <div class="mb-8 text-red-500">
-            <h1 class="text-2xl">Top 50 Cleanest Dronies</h1>
+            <h1 class="text-2xl">Top 100 Cleanest Dronies</h1>
             <small>The list is updated hourly.</small>
         </div>
 
