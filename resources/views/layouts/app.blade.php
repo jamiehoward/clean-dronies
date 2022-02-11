@@ -47,7 +47,7 @@
                 </div>
                 <div>
                     <a href="{{route('top-dronies.index')}}" class="hover:text-green-300 transition ease-in-out">
-                        Top 50
+                        Top 100
                     </a>
                 </div>
                 <total-votes></total-votes>

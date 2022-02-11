@@ -27,7 +27,7 @@ class TopDronieController extends Controller
             ->reject(function ($topDronie) {
                 return $topDronie->dronie->elite_prototype != 'None';
             })
-            ->take(50);
+            ->take(100);
         });
 
         return view('top-dronies.index', compact('topDronies'));
