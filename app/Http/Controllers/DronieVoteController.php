@@ -49,6 +49,7 @@ class DronieVoteController extends Controller
                 'winner_id' => $winner->id,
                 'loser_id' => $loser->id,
                 'attribute' => $request->attribute,
+                'user_id' => $request->user()->id
             ]);
 
             return response($vote);
