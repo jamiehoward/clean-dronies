@@ -1,5 +1,5 @@
 <template>
-    <div class="uppercase text-green-400 text-sm">Total Votes: {{totalVotes}}</div>
+    <div class="uppercase text-green-400 text-sm">My votes: {{userVotes}} (Total Votes: {{totalVotes}})</div>
 </template>
 
 
@@ -7,7 +7,8 @@
     export default {
         data() {
             return {
-                totalVotes : 0
+                totalVotes : 0,
+                userVotes: 0
             }
         },
         mounted() {
@@ -22,7 +23,8 @@
                 const self = this
                 axios.get('/api/votes/total')
                     .then(function (response) {
-                        self.totalVotes = response.data
+                        self.totalVotes = response.data.totalVotes
+                        self.userVotes = response.data.userVotes
                     })
                     .catch(function (error) {
                         console.log(error)

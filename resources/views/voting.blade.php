@@ -5,6 +5,8 @@
         <h1 class="font-bold text-lg mb-8 text-white uppercase">Which Dronie is cleaner?</h1>
         <dronie-voting-list></dronie-voting-list>
     </div>
-
-    <dronie-leaderboard></dronie-leaderboard> 
+    
+    <div class="text-center mt-8">
+        <total-votes></total-votes>
+    </div>
 @endsection
