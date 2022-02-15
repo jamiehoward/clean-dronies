@@ -2164,20 +2164,19 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     setWinnerAndLoser: function setWinnerAndLoser(winner) {
-      var _this2 = this;
-
       // go through each this.dronies and find the winner and loser
-      this.dronies.forEach(function (dronie) {
-        if (dronie.id === winner.id) {
-          _this2.winner = dronie;
+      var self = this;
+      Object.keys(self.dronies).forEach(function (key) {
+        if (self.dronies[key].id === winner.id) {
+          self.winner = self.dronies[key];
         } else {
-          _this2.loser = dronie;
+          self.loser = self.dronies[key];
         }
       });
       this.submitVote();
     },
     submitVote: function submitVote() {
-      var _this3 = this;
+      var _this2 = this;
 
       var self = this;
       axios.post('/api/dronie-votes', {
@@ -2187,7 +2186,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         self.getDronies();
 
-        _this3.$root.$emit('vote');
+        _this2.$root.$emit('vote');
       })["catch"](function (error) {
         console.log(error);
       });

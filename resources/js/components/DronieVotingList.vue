@@ -41,11 +41,12 @@
             },
             setWinnerAndLoser(winner) {
                 // go through each this.dronies and find the winner and loser
-                this.dronies.forEach(dronie => {
-                    if (dronie.id === winner.id) {
-                        this.winner = dronie
+                const self = this
+                Object.keys(self.dronies).forEach(function (key) {
+                    if (self.dronies[key].id === winner.id) {
+                        self.winner = self.dronies[key]
                     } else {
-                        this.loser = dronie
+                        self.loser = self.dronies[key]
                     }
                 })
 
@@ -61,7 +62,7 @@
                     .then(response => {
                         self.getDronies()
 
-                        this.$root.$emit('vote')
+                        this.$root.$emit('vote')    
                     })
                     .catch(error => {
                         console.log(error);
