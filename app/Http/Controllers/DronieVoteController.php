@@ -14,13 +14,32 @@ class DronieVoteController extends Controller
      */
     public function index()
     {
-        $dronies = \App\Models\Dronie::where('attribute_count', '<', 10)
+        $dronies = \App\Models\Dronie::where('attribute_count', '<', 9)
             ->where('elite_prototype', '=', 'None')
             ->get()
-            ->shuffle()
-            ->take(2);
+            ->shuffle();
+        
+        
+        // Filter out the top 10% of dronies so they don't keep getting votes
+        // when there are many others that haven't been voted on yet.
 
-        return response($dronies);
+        $voteThreshold = 1;
+
+        $enoughDroniesToVote = false;
+
+        while (!$enoughDroniesToVote) {
+            $filteredDronies = $dronies->filter(function ($dronie) use ($voteThreshold) {
+                return $dronie->total_votes < $voteThreshold;
+            });
+
+            $enoughDroniesToVote = $filteredDronies->count() > 1;
+
+            $voteThreshold++;
+        }
+
+        dd([$voteThreshold, $filteredDronies->count()]);
+
+        return response($filteredDronies->take(2));
     }
 
     /**
@@ -50,6 +69,14 @@ class DronieVoteController extends Controller
                 'loser_id' => $loser->id,
                 'attribute' => $request->attribute,
                 'user_id' => $request->user()->id
+            ]);
+
+            $winner->update([
+                'total_votes' => $winner->total_votes + 1
+            ]);
+
+            $loser->update([
+                'total_votes' => $loser->total_votes + 1
             ]);
 
             return response($vote);
