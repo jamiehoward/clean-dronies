@@ -37,7 +37,7 @@ class DronieVoteController extends Controller
             $voteThreshold++;
         }
 
-        dd([$voteThreshold, $filteredDronies->count()]);
+        // dd([$voteThreshold, $filteredDronies->count()]);
 
         return response($filteredDronies->take(2));
     }
