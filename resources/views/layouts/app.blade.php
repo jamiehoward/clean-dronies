@@ -47,11 +47,9 @@
                 </div>
                 <div>
                     <a href="{{route('top-dronies.index')}}" class="hover:text-green-300 transition ease-in-out">
-                        Top 100
+                        Leaderboard
                     </a>
                 </div>
-                <total-votes></total-votes>
-                {{-- <div><strike class="cursor-not-allowed">Connect Wallet</strike></div> --}}
             </nav>
 
             @yield('content')

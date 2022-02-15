@@ -58,9 +58,12 @@ class DronieVoteController extends Controller
 
     public function totalVotes()
     {
-        $votes = \App\Models\Vote::count();
+        $data = [
+            'totalVotes' => \App\Models\Vote::count(),
+            'userVotes' => \Auth::user()->votes->count()
+        ];
 
-        return response($votes);
+        return response($data);
     }
 
     /**
