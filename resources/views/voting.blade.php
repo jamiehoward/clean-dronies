@@ -1,24 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="grid gap-12">
-    <div class="md:w-1/2 mx-auto mt-16 rounded-md px-4 text-center grid gap-6 mb-8">
-        <div class="">
-            <h1 class="font-bold text-3xl mb-8 text-green-400 uppercase font-serif">Which Dronie is cleaner?</h1>
-            <dronie-voting-list></dronie-voting-list>
+    <div class="grid gap-12">
+        <div class="md:w-1/2 mx-auto mt-16 rounded-md px-4 text-center grid gap-6 mb-8">
+            <div class="">
+                <h1 class="font-bold text-3xl mb-8 text-green-400 uppercase font-serif">Which Dronie is cleaner?</h1>
+                <dronie-voting-list></dronie-voting-list>
+            </div>
+            <total-votes></total-votes>
         </div>
-        <total-votes></total-votes>
     </div>
-</div> 
-    <div class="bg-slate-800 py-12">
+
+    {{-- <div class="bg-slate-800 py-12">
         <div class="mx-auto text-center">
             <h2 class="text-4xl font-bold text-white uppercase font-serif mb-6">Find a Dronie</h2>
             <p class="text-slate-400 mb-6 px-4">Find out how clean your Dronie is by searching by their NFT collection ID.</p>
             <dronie-search></dronie-search>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="md:flex gap-12 p-8" id="about">
+    <div class="md:flex gap-12 p-8 bg-slate-800 " id="about">
         <div id="faqs" class="md:w-2/3">
             <h2 class="text-4xl font-bold text-white uppercase font-serif mb-6">FAQs</h2>
             <ul>
