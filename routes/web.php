@@ -24,7 +24,7 @@ Route::get('/', function () {
             "How do I submit my dronie for voting?" => "The entire NFT collection is here, so your dronie is already included. Get to voting!",
             "Why don't I see my dronie in the leaderboard?" => "It could be for two main reasons: 1) your dronie hasn't been voted on enough (remember, there are 10k of them!), or 2) your dronie isn't, ahem, one of the cleanest.",
             "Is this an official Dronies site?" => "Nope. The site was born from discord chats of the Dronies Clean Gang, a self-organized group of Dronie holders. We're just passionate about building up the Dronies community.",
-            "I'm addicted to voting on clean dronies. Help!" => "Hey, we all are. If you want to complain about it, tweet <a href='https://twitter.com/intent/follow?screen_name=JamieHoward' target='_blank' class='text-red-500'>@JamieHoward</a>.",
+            "I'm addicted to voting on clean dronies. Help!" => "Hey, we all are. If you want to complain about it, tweet <a href='https://twitter.com/intent/follow?screen_name=JamieHoward' target='_blank' class='text-red-500 twitter-link'>@JamieHoward</a>.",
         ]
     ];
 

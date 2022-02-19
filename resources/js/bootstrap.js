@@ -87,4 +87,3 @@ const app = new Vue({
         customers: [],
     }
 });
-

@@ -2270,6 +2270,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       dronie: {},
+      searchId: '',
       dronieData: {
         "id": 1,
         "nft_id": "8018",
@@ -2327,6 +2328,11 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
+    searchForDronie: function searchForDronie() {
+      var self = this;
+      axios.get('/api/dronies/getByNftId/' + self.searchId);
+      this.modalIsOpen = true;
+    },
     setDronieData: function setDronieData() {
       this.dronie = this.dronieData;
       this.showModal();
@@ -53993,9 +53999,26 @@ var render = function () {
     { staticClass: "flex justify-center md:text-3xl text-2xl" },
     [
       _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.searchId,
+            expression: "searchId",
+          },
+        ],
         staticClass:
           "text-center bg-transparent border border-green-400 active:border-green-400 focus:border-green-400 outline-none text-green-400 font-bold p-4",
         attrs: { type: "number", placeholder: "e.g. 1234" },
+        domProps: { value: _vm.searchId },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.searchId = $event.target.value
+          },
+        },
       }),
       _vm._v(" "),
       _c(

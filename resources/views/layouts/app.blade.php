@@ -57,11 +57,23 @@
 
             @yield('content')
             
-            <div class="text-white text-center mt-8 text-sm">
-                Let's be friends on Twitter: <a href="https://twitter.com/intent/follow?screen_name=JamieHoward" target="_blank" class="text-red-500">@JamieHoward</a>.
+            <div class="text-white text-center my-8 text-sm md:flex md:justify-between px-8">
+                <div class="md:mb-0 mb-2">Built with <span class="text-red-500">♥️</span> by <a href="https://twitter.com/intent/follow?screen_name=JamieHoward" target="_blank" class="text-red-500 twitter-link">@JamieHoward</a>.</div>
+                <div>Found this useful? Tips appreciated! <span id="donation-wallet" onClick="copyToClipboard('AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ')" class="font-bold hover:text-gray-300 transition cursor-pointer">AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ</span></div>
             </div>
         </div>
 
+        <script>
+            function copyToClipboard(value) {
+                var tempInput = document.createElement("input");
+                tempInput.style = "position: absolute; left: -1000px";
+                tempInput.value = value;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
 
+                alert("Copied to clipboard: " + value);
+            }
+        </script>
     </body>
 </html>
