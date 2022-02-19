@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center text-red-500 mt-4 md:w-1/3 w-2/3 p-4 mx-auto">
+    <div class="text-center text-red-500 w-full p-4">
         <div class="mb-4 uppercase font-bold">The top cleanest:</div>
             <div class="grid grid-flow-col gap-4 text-center">
                 <div v-for="leader in leaders" :key="leader.id">

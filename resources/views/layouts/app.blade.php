@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Laravel') }} | A community-sourced NFT rarity tool where votes translate into value.</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -36,16 +36,19 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-mono antialiased bg-black">
+    <body class="font-mono antialiased bg-slate-900">
         <div class="w-full" id="app">
 
             <nav class="text-white p-4 flex justify-between">
                 <div class="font-bold uppercase">
-                    <a href="/" class="hover:text-green-300 transition ease-in-out">
+                    <a href="/" class="hover:text-green-400 transition ease-in-out font-serif text-2xl">
                         {{config('app.name')}}
                     </a>
                 </div>
-                <div>
+                <div class="flex gap-6 font-bold uppercase">
+                    <a href="#about" class="hover:text-green-300 transition ease-in-out">
+                        About
+                    </a>
                     <a href="{{route('top-dronies.index')}}" class="hover:text-green-300 transition ease-in-out">
                         Leaderboard
                     </a>
@@ -54,11 +57,23 @@
 
             @yield('content')
             
-            <div class="text-white text-center mt-8 text-sm">
-                Want to be notified of updates? Follow <a href="https://twitter.com/intent/follow?screen_name=JamieHoward" target="_blank" class="text-red-500">@JamieHoward</a> on Twitter.
+            <div class="text-white text-center my-8 text-sm md:flex md:justify-between px-8">
+                <div class="md:mb-0 mb-2">Built with <span class="text-red-500">♥️</span> by <a href="https://twitter.com/intent/follow?screen_name=JamieHoward" target="_blank" class="text-red-500 twitter-link">@JamieHoward</a>.</div>
+                <div>Found this useful? Tips appreciated! <span id="donation-wallet" onClick="copyToClipboard('AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ')" class="font-bold hover:text-gray-300 transition cursor-pointer">AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ</span></div>
             </div>
         </div>
 
+        <script>
+            function copyToClipboard(value) {
+                var tempInput = document.createElement("input");
+                tempInput.style = "position: absolute; left: -1000px";
+                tempInput.value = value;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
 
+                alert("Copied to clipboard: " + value);
+            }
+        </script>
     </body>
 </html>

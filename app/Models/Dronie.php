@@ -28,4 +28,9 @@ class Dronie extends Model
     {
         return number_format($this->winningVotes->count() - $this->losingVotes->count(),2);
     }
+
+    public function topDronie()
+    {
+        return $this->hasOne(TopDronie::class);
+    }
 }
