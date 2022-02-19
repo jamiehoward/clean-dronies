@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="grid gap-12">
-    <div class="md:w-1/2 mx-auto mt-16 rounded-md px-4 text-center grid gap-6">
+    <div class="md:w-1/2 mx-auto mt-16 rounded-md px-4 text-center grid gap-6 mb-8">
         <div class="">
             <h1 class="font-bold text-3xl mb-8 text-green-400 uppercase font-serif">Which Dronie is cleaner?</h1>
             <dronie-voting-list></dronie-voting-list>
         </div>
         <total-votes></total-votes>
     </div>
-</div>
+</div> 
     <div class="bg-slate-800 py-12">
         <div class="mx-auto text-center">
             <h2 class="text-4xl font-bold text-white uppercase font-serif mb-6">Find a Dronie</h2>
