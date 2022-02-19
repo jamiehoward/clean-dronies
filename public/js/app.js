@@ -2087,13 +2087,91 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['dronie'],
   data: function data() {
     return {};
   },
   mounted: function mounted() {},
-  methods: {}
+  methods: {
+    hideModal: function hideModal() {
+      this.$root.$emit('hideModal');
+    }
+  }
 });
 
 /***/ }),
@@ -2231,13 +2309,33 @@ __webpack_require__.r(__webpack_exports__);
         },
         "winning_votes": [],
         "losing_votes": []
-      }
+      },
+      modalIsOpen: false
     };
   },
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    var _this = this;
+
+    document.addEventListener('keyup', function (e) {
+      if (e.keyCode === 27) {
+        _this.hideModal();
+      }
+    }); // hide modal if hideModal $root event is fired
+
+    this.$root.$on('hideModal', function () {
+      _this.hideModal();
+    });
+  },
   methods: {
     setDronieData: function setDronieData() {
       this.dronie = this.dronieData;
+      this.showModal();
+    },
+    showModal: function showModal() {
+      this.modalIsOpen = true;
+    },
+    hideModal: function hideModal() {
+      this.modalIsOpen = false;
     }
   }
 });
@@ -53605,7 +53703,7 @@ var render = function () {
             attrs: { "aria-hidden": "true" },
             on: {
               click: function ($event) {
-                return _vm.closeModal()
+                return _vm.hideModal()
               },
             },
           }),
@@ -53633,13 +53731,138 @@ var render = function () {
                     "dronie-card  bg-gradient-to-b hover:shadow-lg from-slate-700 to-slate-800 ease-in-out p-8 rounded-md",
                 },
                 [
-                  _c("img", {
-                    staticClass: "rounded-md border-slate-500 border-2",
-                    attrs: { src: _vm.dronie.image, width: "250px" },
-                  }),
+                  _c(
+                    "div",
+                    { staticClass: "flex justify-between w-full mb-6" },
+                    [
+                      _c("img", {
+                        staticClass:
+                          "rounded-md border-slate-500 border-2 w-64 h-64",
+                        attrs: { src: _vm.dronie.image, alt: "" },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-right leading-loose" }, [
+                        _c("div", [_vm._v("#" + _vm._s(_vm.dronie.nft_id))]),
+                        _vm._v(" "),
+                        _vm._m(0),
+                        _vm._v(" "),
+                        _vm._m(1),
+                        _vm._v(" "),
+                        _vm._m(2),
+                      ]),
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "flex justify-end w-full" }, [
-                    _c("div", [_vm._v("#" + _vm._s(_vm.dronie.nft_id))]),
+                  _c("div", { staticClass: "flex gap-4 w-full" }, [
+                    _c("div", { staticClass: "w-full" }, [
+                      _c("div", { staticClass: "text-sm w-full" }, [
+                        _c("ul", [
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Attributes")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.attribute_count)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Rank")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v("#" + _vm._s(_vm.dronie.rank)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Color")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.color)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Background")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.background)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Body")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.body)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Body Texture")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.body_texture)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Chest Accessory")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.chest_accessory)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Head")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.head)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Eyes")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.eyes)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Mask")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.mask)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Beak")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.beak)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Hat")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.hat)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Wings")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.wings)),
+                            ]),
+                          ]),
+                        ]),
+                      ]),
+                    ]),
                   ]),
                 ]
               ),
@@ -53650,7 +53873,46 @@ var render = function () {
     ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-base leading-tight mb-4" }, [
+      _c("div", { staticClass: "font-bold text-xl text-green-300" }, [
+        _vm._v("88%"),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "uppercase text-xs" }, [_vm._v("Clean Score")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-base leading-tight mb-4" }, [
+      _c("div", { staticClass: "font-bold text-green-300" }, [
+        _vm._v("Clean Adjacent"),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "uppercase text-xs" }, [
+        _vm._v("Classification"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-base leading-tight mb-4" }, [
+      _c("div", { staticClass: "font-bold text-green-300" }, [_vm._v("#156")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "uppercase text-xs" }, [
+        _vm._v("Voted Clean Ranking"),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -53771,7 +54033,7 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _vm.dronie.nft_id
+      _vm.modalIsOpen
         ? _c(
             "div",
             [_c("dronie-detail-card", { attrs: { dronie: _vm.dronie } })],
