@@ -59,7 +59,7 @@
             
             <div class="text-white text-center my-8 text-sm md:flex md:justify-between px-8">
                 <div class="md:mb-0 mb-2">Built with <span class="text-red-500">♥️</span> by <a href="https://twitter.com/intent/follow?screen_name=JamieHoward" target="_blank" class="text-red-500 twitter-link">@JamieHoward</a>.</div>
-                <div>Found this useful? Tips appreciated! <span id="donation-wallet" onClick="copyToClipboard('AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ')" class="font-bold hover:text-gray-300 transition cursor-pointer">AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ</span></div>
+                <div>Found this useful? Tips appreciated! <span id="donation-wallet" onClick="copyToClipboard('AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ')" class="font-bold hover:text-gray-300 transition cursor-pointer">AEJ...SnQ</span></div>
             </div>
         </div>
 
