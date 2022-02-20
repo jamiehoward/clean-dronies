@@ -2161,6 +2161,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['dronie'],
   data: function data() {
@@ -53920,6 +53924,14 @@ var render = function () {
                             _vm._v(" "),
                             _c("span", { staticClass: "font-bold" }, [
                               _vm._v(_vm._s(_vm.dronie.background)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "flex justify-between" }, [
+                            _c("span", [_vm._v("Back Storage")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "font-bold" }, [
+                              _vm._v(_vm._s(_vm.dronie.back_storage)),
                             ]),
                           ]),
                           _vm._v(" "),
