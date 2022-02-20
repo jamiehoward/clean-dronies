@@ -102,7 +102,7 @@ class DronieController extends Controller
     */
     public function getByNftId($nftId)
     {
-        $dronie = Dronie::where('nft_id', $nftId)->firstOrFail();
+        $dronie = Dronie::where('nft_id', $nftId)->with('topDronie')->firstOrFail();
 
         return response()->json($dronie);
     }
