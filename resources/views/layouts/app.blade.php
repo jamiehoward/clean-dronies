@@ -53,7 +53,7 @@
                     </a>
                 </div>
                 <div class="grid md:flex md:gap-6 gap-2 text-right font-bold uppercase">
-                    <a href="#about" class="hover:text-green-300 transition ease-in-out">
+                    <a href="/#about" class="hover:text-green-300 transition ease-in-out">
                         About
                     </a>
                     <a href="{{route('top-dronies.index')}}" class="hover:text-green-300 transition ease-in-out">
