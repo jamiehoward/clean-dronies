@@ -37,7 +37,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-mono antialiased bg-slate-900">
-        <div class="w-full" id="app">
+        <div class="w-full bg-slate-900" id="app">
 
             <nav class="text-white p-4 flex justify-between">
                 <div class="font-bold uppercase">
@@ -59,7 +59,7 @@
             
             <div class="text-white text-center my-8 text-sm md:flex md:justify-between px-8">
                 <div class="md:mb-0 mb-2">Built with <span class="text-red-500">♥️</span> by <a href="https://twitter.com/intent/follow?screen_name=JamieHoward" target="_blank" class="text-red-500 twitter-link">@JamieHoward</a>.</div>
-                <div>Found this useful? Tips appreciated! <span id="donation-wallet" onClick="copyToClipboard('AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ')" class="font-bold hover:text-gray-300 transition cursor-pointer">AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ</span></div>
+                <div>Found this useful? Tips appreciated! <span id="donation-wallet" onClick="copyToClipboard('AEJfXj19antR3vVHbYem2wyaoqiPPHS2AySMy9EP9SnQ')" class="font-bold hover:text-gray-300 transition cursor-pointer">AEJ...SnQ</span></div>
             </div>
         </div>
 

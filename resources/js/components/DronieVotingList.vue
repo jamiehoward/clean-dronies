@@ -5,7 +5,7 @@
             :dronie="dronie"
             v-for="dronie in dronies"
             :key="dronie.id"
-            class="dronie-card hover:scale-105 hover:translate-y-2 bg-gradient-to-b hover:shadow-lg from-slate-700 to-slate-800 ease-in-out duration-200 transition transform p-8 rounded-md cursor-pointer animate-fade-in-down border border-green-400">
+            class="dronie-card hover:scale-105 hover:translate-y-2 bg-gradient-to-b hover:shadow-lg from-slate-700 to-slate-800 ease-in-out duration-200 transition transform md:p-8 p-2 rounded-md cursor-pointer animate-fade-in-down border border-green-400">
             <img v-if="dronie" class="rounded-md border-slate-500 border-2" v-bind:src="dronie.image" width="250px"/>
             <div class="flex justify-end w-full">
                 <div>#{{dronie.nft_id}}</div>
