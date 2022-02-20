@@ -4,6 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="/img/logo-mark.svg">
+        <meta name="apple-mobile-web-app-title" content="Clean Dronies">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="icon" href="/img/logo-mark.svg">
 
         <title>{{ config('app.name', 'Laravel') }} | A community-sourced NFT rarity tool where votes translate into value.</title>
 
@@ -41,11 +47,12 @@
 
             <nav class="text-white p-4 flex justify-between">
                 <div class="font-bold uppercase">
-                    <a href="/" class="hover:text-green-400 transition ease-in-out font-serif text-2xl">
-                        {{config('app.name')}}
+                    <a href="/" class="hover:text-green-400 transition ease-in-out font-serif text-2xl flex items-center gap-2">
+                        <div class="text-4xl md:text-2xl">🧼</div>
+                        <div class="md:visible invisible">{{config('app.name')}}</div>
                     </a>
                 </div>
-                <div class="flex gap-6 font-bold uppercase">
+                <div class="grid md:flex md:gap-6 gap-2 text-right font-bold uppercase">
                     <a href="#about" class="hover:text-green-300 transition ease-in-out">
                         About
                     </a>
