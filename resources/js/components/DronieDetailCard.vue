@@ -7,8 +7,9 @@
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
             
             <div class="text-slate-400 mb-24 inline-block align-bottom bg-transparent rounded-lg text-left overflow-hidden transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-green-400">    
-                <div class="dronie-card  bg-gradient-to-b hover:shadow-lg from-slate-700 to-slate-800 ease-in-out p-8 rounded-md">
-                    <div class="flex justify-between w-full mb-6">
+                <div class="dronie-card  bg-gradient-to-b hover:shadow-lg from-slate-700 to-slate-800 ease-in-out p-8 rounded-md relative">
+                    <div class="text-xs absolute top-2 text-center md:right-4 uppercase">cleandronies.com</div>
+                    <div class="md:flex justify-between w-full mb-6">
                         <img class="rounded-md border-slate-500 border-2 w-64 h-64" v-bind:src="dronie.image" alt="" />
                         <div class="text-right leading-loose">
                             <div>#{{dronie.nft_id}}</div>
@@ -20,10 +21,10 @@
                                 <div class="font-bold text-green-300">Clean Adjacent</div>
                                 <div class="uppercase text-xs">Classification</div>
                             </div> -->
-                            <!-- <div class="text-base leading-tight mb-4">
-                                <div class="font-bold text-green-300">#156</div>
-                                <div class="uppercase text-xs">Voted Clean Ranking</div>
-                            </div> -->
+                            <div class="text-base leading-tight mb-4">
+                                <div class="font-bold text-green-300">{{ dronie.top_dronie.id }}/10000</div>
+                                <div class="uppercase text-xs">Voted Clean Rank</div>
+                            </div>
                         </div>
                     </div>
                     <div class="flex gap-4 w-full">
