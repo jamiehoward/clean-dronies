@@ -54095,94 +54095,90 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "flex justify-center md:text-3xl text-2xl" },
-    [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.searchId,
-            expression: "searchId",
-          },
-        ],
+  return _c("div", { staticClass: "flex justify-center md:text-3xl text-xl" }, [
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.searchId,
+          expression: "searchId",
+        },
+      ],
+      staticClass:
+        "text-center bg-transparent border border-green-400 active:border-green-400 focus:border-green-400 outline-none text-green-400 font-bold md:p-4 p-2",
+      attrs: { type: "number", placeholder: "e.g. 1234" },
+      domProps: { value: _vm.searchId },
+      on: {
+        keyup: function ($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchForDronie()
+        },
+        input: function ($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.searchId = $event.target.value
+        },
+      },
+    }),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
         staticClass:
-          "text-center bg-transparent border border-green-400 active:border-green-400 focus:border-green-400 outline-none text-green-400 font-bold p-4",
-        attrs: { type: "number", placeholder: "e.g. 1234" },
-        domProps: { value: _vm.searchId },
+          "bg-slate-600 hover:bg-slate-700 transition duration-100 text-white px-8 font-bold",
         on: {
-          keyup: function ($event) {
-            if (
-              !$event.type.indexOf("key") &&
-              _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-            ) {
-              return null
-            }
+          click: function ($event) {
             return _vm.searchForDronie()
           },
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.searchId = $event.target.value
-          },
         },
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass:
-            "bg-slate-600 hover:bg-slate-700 transition duration-100 text-white px-8 font-bold",
-          on: {
-            click: function ($event) {
-              return _vm.searchForDronie()
+      },
+      [
+        _c(
+          "svg",
+          {
+            staticClass: "h-8 w-8",
+            attrs: {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 20 20",
+              fill: "currentColor",
             },
           },
-        },
-        [
-          _c(
-            "svg",
-            {
-              staticClass: "h-8 w-8",
+          [
+            _c("path", {
               attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 20 20",
-                fill: "currentColor",
+                "fill-rule": "evenodd",
+                d: "M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z",
+                "clip-rule": "evenodd",
               },
-            },
-            [
-              _c("path", {
-                attrs: {
-                  "fill-rule": "evenodd",
-                  d: "M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z",
-                  "clip-rule": "evenodd",
-                },
-              }),
-            ]
-          ),
-        ]
-      ),
-      _vm._v(" "),
-      _vm.modalIsOpen
-        ? _c(
-            "div",
-            [
-              _vm.error.message == ""
-                ? _c("dronie-detail-card", { attrs: { dronie: _vm.dronie } })
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.error.message != ""
-                ? _c("search-error", { attrs: { error: _vm.error } })
-                : _vm._e(),
-            ],
-            1
-          )
-        : _vm._e(),
-    ]
-  )
+            }),
+          ]
+        ),
+      ]
+    ),
+    _vm._v(" "),
+    _vm.modalIsOpen
+      ? _c(
+          "div",
+          [
+            _vm.error.message == ""
+              ? _c("dronie-detail-card", { attrs: { dronie: _vm.dronie } })
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.error.message != ""
+              ? _c("search-error", { attrs: { error: _vm.error } })
+              : _vm._e(),
+          ],
+          1
+        )
+      : _vm._e(),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -54216,7 +54212,7 @@ var render = function () {
         {
           key: dronie.id,
           staticClass:
-            "dronie-card hover:scale-105 hover:translate-y-2 bg-gradient-to-b hover:shadow-lg from-slate-700 to-slate-800 ease-in-out duration-200 transition transform p-8 rounded-md cursor-pointer animate-fade-in-down border border-green-400",
+            "dronie-card hover:scale-105 hover:translate-y-2 bg-gradient-to-b hover:shadow-lg from-slate-700 to-slate-800 ease-in-out duration-200 transition transform md:p-8 p-2 rounded-md cursor-pointer animate-fade-in-down border border-green-400",
           attrs: { dronie: dronie },
           on: {
             click: function ($event) {
