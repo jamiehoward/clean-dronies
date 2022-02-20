@@ -93,4 +93,17 @@ class DronieController extends Controller
     {
         //
     }
+
+    /**
+     * Get the dronies for the given NFT ID.
+     * 
+     * @param  string  $nftId
+     * @return \Illuminate\Http\Response
+    */
+    public function getByNftId($nftId)
+    {
+        $dronie = Dronie::where('nft_id', $nftId)->firstOrFail();
+
+        return response()->json($dronie);
+    }
 }

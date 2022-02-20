@@ -12,7 +12,7 @@
                         <img class="rounded-md border-slate-500 border-2 w-64 h-64" v-bind:src="dronie.image" alt="" />
                         <div class="text-right leading-loose">
                             <div>#{{dronie.nft_id}}</div>
-                            <div class="text-base leading-tight mb-4">
+                            <!-- <div class="text-base leading-tight mb-4">
                                 <div class="font-bold text-xl text-green-300">88%</div>
                                 <div class="uppercase text-xs">Clean Score</div>
                             </div>
@@ -23,7 +23,7 @@
                             <div class="text-base leading-tight mb-4">
                                 <div class="font-bold text-green-300">#156</div>
                                 <div class="uppercase text-xs">Voted Clean Ranking</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="flex gap-4 w-full">

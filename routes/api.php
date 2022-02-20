@@ -22,3 +22,5 @@ Route::resource('dronie-votes', 'App\Http\Controllers\DronieVoteController');
 Route::resource('leaders', 'App\Http\Controllers\DronieLeaderController');
 
 Route::get('votes/total', 'App\Http\Controllers\DronieVoteController@totalVotes');
+
+Route::get('dronies/getByNftId/{nftId}', 'App\Http\Controllers\DronieController@getByNftId');
