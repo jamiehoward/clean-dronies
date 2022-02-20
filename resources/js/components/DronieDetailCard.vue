@@ -19,8 +19,8 @@
                             <div class="text-base leading-tight mb-4">
                                 <div class="font-bold text-green-300">Clean Adjacent</div>
                                 <div class="uppercase text-xs">Classification</div>
-                            </div>
-                            <div class="text-base leading-tight mb-4">
+                            </div> -->
+                            <!-- <div class="text-base leading-tight mb-4">
                                 <div class="font-bold text-green-300">#156</div>
                                 <div class="uppercase text-xs">Voted Clean Ranking</div>
                             </div> -->
@@ -45,6 +45,10 @@
                                     <li class="flex justify-between">
                                         <span>Background</span>
                                         <span class="font-bold">{{ dronie.background }}</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>Back Storage</span>
+                                        <span class="font-bold">{{ dronie.back_storage }}</span>
                                     </li>
                                     <li class="flex justify-between">
                                         <span>Body</span>
