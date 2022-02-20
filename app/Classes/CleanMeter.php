@@ -79,12 +79,12 @@ class CleanMeter
     {
         $categories = [
             81 => "NOT CLEAN",
-            84 => "CLEAN ADJACENT",
-            87 => "SUB CLEAN",
+            83 => "CLEAN ADJACENT",
+            86 => "SUB CLEAN",
             89 => "SEMI CLEAN",
-            91 => "CLEAN",
-            93 => "PURE CLEAN",
-            100 => "TRUE CLEAN" 
+            90 => "CLEAN",
+            92 => "PURE CLEAN",
+            93 => "TRUE CLEAN" 
         ];
 
         foreach ($categories as $score => $category) {
