@@ -11,15 +11,15 @@
         </div>
     </div>
 
-    {{-- <div class="bg-slate-800 py-12">
+    <div class="bg-slate-800 py-12">
         <div class="mx-auto text-center">
             <h2 class="text-4xl font-bold text-white uppercase font-serif mb-6">Find a Dronie</h2>
             <p class="text-slate-400 mb-6 px-4">Find out how clean your Dronie is by searching by their NFT collection ID.</p>
             <dronie-search></dronie-search>
         </div>
-    </div> --}}
+    </div>
 
-    <div class="md:flex gap-12 p-8 bg-slate-800 " id="about">
+    <div class="md:flex gap-12 p-8" id="about">
         <div id="faqs" class="md:w-2/3">
             <h2 class="text-4xl font-bold text-white uppercase font-serif mb-6">FAQs</h2>
             <ul>
