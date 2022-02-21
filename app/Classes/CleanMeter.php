@@ -10,7 +10,7 @@ class CleanMeter
     private $dronie;
     private $penalty = 0;
     private $cleanScore = 0;
-    private $category = 'Unrated';
+    private $category = 'NOT CLEAN';
 
     public function setDronie(Dronie $dronie)
     {
@@ -78,12 +78,11 @@ class CleanMeter
     public function getCategory()
     {
         $categories = [
-            81 => "NOT CLEAN",
-            83 => "CLEAN ADJACENT",
-            86 => "SUB CLEAN",
-            89 => "SEMI CLEAN",
-            90 => "CLEAN",
-            92 => "PURE CLEAN",
+            81 => "CLEAN ADJACENT",
+            84 => "SUB CLEAN",
+            87 => "SEMI CLEAN",
+            89 => "CLEAN",
+            91 => "PURE CLEAN",
             93 => "TRUE CLEAN" 
         ];
 
