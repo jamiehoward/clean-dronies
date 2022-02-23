@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+!/public/storage/app/clean-gang-rules.json
 /storage/*.key
 /vendor
 .env
