@@ -22,14 +22,14 @@
                                 <div class="font-bold text-green-300">{{ dronie.top_dronie.id }}/10000</div>
                                 <div class="uppercase md:text-xs text-2xs">Voted Clean Rank</div>
                             </div>
-                            <div class="text-base leading-tight mb-4">
+                            <!-- <div class="text-base leading-tight mb-4">
                                 <div class="font-bold text-green-300">{{dronie.clean_meter_rating.clean_score}}%</div>
                                 <div class="uppercase md:text-xs text-2xs">CleanMeter Score</div>
                             </div>
                             <div class="text-base leading-tight mb-4">
                                 <div class="font-bold text-green-300">{{dronie.clean_meter_rating.clean_category}}</div>
                                 <div class="uppercase md:text-xs text-2xs">CleanMeter Class</div>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="text-sm w-full">
