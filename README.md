@@ -1,66 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Clean Dronies - Community-Sourced NFT Rarity Tool
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Laravel-based web application that enables community voting on NFT attributes, originally built for the [Dronies NFT collection](https://www.droniesnft.com/). This tool was created to help identify "clean" NFTs - those with minimal design attributes that became unexpectedly valuable in the community.
 
-## About Laravel
+![Clean Dronies Interface](screenshot.jpeg)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## The Story
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Clean Dronies was born from an interesting phenomenon in the NFT space where sometimes the "cleaner" (less cluttered) NFTs become more desirable than their rarer counterparts. While traditional rarity tools focus on attribute scarcity, this project explores the concept of "clean" design - where simplicity and minimalism create value.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The project started with the "Clean Gang" - a group of Dronies NFT holders who identified and defined what makes a Dronie "clean". Their scoring system, defined in `clean-gang-rules.json`, became the foundation for this community-driven ranking tool.
 
-## Learning Laravel
+## Architecture
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Core Components
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Clean Gang Rules Engine**
+   - Implemented in `CleanMeter` class
+   - Calculates clean scores based on attribute combinations
+   - Categorizes Dronies from "NOT CLEAN" to "TRUE CLEAN"
+   - Provides baseline for community voting
 
-## Laravel Sponsors
+2. **Voting System**
+   - Tournament-style voting interface
+   - Real-time leaderboard updates
+   - Win percentage tracking
+   - Caching for performance
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. **Data Collection**
+   - Automated scraping from HowRare.is
+   - Comprehensive attribute tracking
+   - Market data integration
+   - Regular data updates
 
-### Premium Partners
+### Data Flow
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+1. **Initial Setup**
+   ```bash
+   # Scrape NFT data
+   php artisan scrape:dronies
+   
+   # Initialize voting system
+   php artisan votes:translate-score
+   
+   # Compile initial rankings
+   php artisan dronies:compile-top
+   ```
 
-## Contributing
+2. **Regular Maintenance**
+   - Daily scraping of new data
+   - Weekly vote compilation
+   - Monthly clean score recalculation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Performance Optimization**
+   - Cached leaderboards
+   - Indexed database queries
+   - Optimized asset loading
 
-## Code of Conduct
+### Key Features
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Tournament-style voting system
+- Real-time leaderboard
+- NFT search functionality
+- Community-driven rankings
+- Clean score calculation
+- Win percentage tracking
+- Caching for performance optimization
 
-## Security Vulnerabilities
+## Getting Started
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+For detailed setup instructions and development guidelines, see our [Quick Start Guide](QUICKSTART.md).
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open source and available under the [MIT License](LICENSE.md). While you are free to use and modify this code for any purpose, we kindly request that you include attribution to Jamie Howard (@jamiehoward) in any derivative works or distributions.
