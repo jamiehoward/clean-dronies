@@ -1,0 +1,143 @@
+---
+description: This rule stores the overview of the codebase, its purpose, and its general architecture. Use this to get up to speed when beginning new work on the project.
+globs: 
+alwaysApply: false
+---
+# Clean Dronies Project Context
+
+## Project Overview
+This is a Laravel-based web application for the Dronies NFT collection that implements a community-driven voting system to identify "clean" NFTs. The project is unique because it focuses on design simplicity rather than traditional rarity metrics.
+
+However, the project is intended to be adapted for others to use for their own voting projects, so reference to Dronies is just an implementation detail. You'll likely want to replace all `dronies` references with whatever the important Model is for the project.
+
+## Key Files and Their Purposes
+
+### Core Business Logic
+- `app/Classes/CleanMeter.php`: Implements the Clean Gang Rules scoring system
+  - Calculates clean scores based on attribute combinations
+  - Uses a base score of 100 with penalties
+  - Categorizes Dronies from "NOT CLEAN" to "TRUE CLEAN"
+  - Caches calculations for performance
+
+- `clean-gang-rules.json`: Defines the scoring system
+  - Contains attribute scoring rules
+  - Defines combination modifiers
+  - Used to initialize the voting system
+
+### Data Collection
+- `app/Console/Commands/ScrapeDronies.php`: Main scraping command
+  - Scrapes all Dronies from HowRare.is (IDs 1-10000)
+  - Includes error handling and rate limiting
+
+- `app/Console/Commands/ScrapeDroniePage.php`: Single Dronie scraper
+  - Collects detailed attributes and market data
+  - Uses DOM parsing to extract information
+
+### Voting System
+- `app/Http/Controllers/DronieVoteController.php`: Manages voting process
+  - Handles tournament-style voting
+  - Records winner/loser relationships
+  - Updates clean scores
+
+- `app/Console/Commands/CompileTopDronies.php`: Ranking system
+  - Sorts Dronies by clean score
+  - Calculates win percentages
+  - Updates leaderboard
+
+### Data Models
+- `app/Models/Dronie.php`: Core NFT model
+  - Stores all NFT attributes
+  - Manages relationships with votes
+  - Handles clean score calculations
+
+- `app/Models/Vote.php`: Voting records
+  - Tracks voting history
+  - Maintains winner/loser relationships
+
+- `app/Models/TopDronie.php`: Leaderboard management
+  - Stores rankings
+  - Maintains clean scores
+  - Tracks voting statistics
+
+## Database Structure
+- `dronies`: Stores NFT information and attributes
+- `votes`: Records voting history and relationships
+- `top_dronies`: Maintains rankings and scores
+- `users`: Manages user authentication
+
+## Key Concepts
+
+### Clean Score System
+1. Base score starts at 100
+2. Penalties applied based on:
+   - Individual attribute scores
+   - Attribute combinations
+   - Special cases defined in rules
+3. Categories:
+   - "NOT CLEAN" (default)
+   - "CLEAN ADJACENT" (≥81)
+   - "SUB CLEAN" (≥84)
+   - "SEMI CLEAN" (≥87)
+   - "CLEAN" (≥89)
+   - "PURE CLEAN" (≥91)
+   - "TRUE CLEAN" (≥93)
+
+### Voting Mechanics
+1. Tournament-style voting
+2. Real-time leaderboard updates
+3. Win percentage tracking
+4. Clean score calculation (wins - losses)
+
+### Data Flow
+1. Initial Setup:
+   ```bash
+   php artisan scrape:dronies
+   php artisan votes:translate-score
+   php artisan dronies:compile-top
+   ```
+
+2. Regular Maintenance:
+   - Daily data scraping
+   - Weekly vote compilation
+   - Monthly score recalculation
+
+## Performance Considerations
+- Caching for leaderboards
+- Database indexing for quick lookups
+- Optimized asset loading
+- Rate limiting for scraping
+
+## Frontend Components
+- Vue.js-based interface
+- Real-time updates
+- Tournament-style voting UI
+- Leaderboard display
+- Search functionality
+
+## Common Tasks
+1. Adding new Dronies:
+   ```bash
+   php artisan scrape:single-dronie {id}
+   ```
+
+2. Updating rankings:
+   ```bash
+   php artisan dronies:compile-top
+   ```
+
+3. Fixing data issues:
+   ```bash
+   php artisan fixes:sale-price
+   ```
+
+4. Recalculating votes:
+   ```bash
+   php artisan dronies:backfill-total-votes
+   ```
+
+## Important Notes
+- The project uses Laravel Herd for local development
+- Clean Gang Rules are central to the scoring system
+- The voting system is designed to be community-driven
+- Performance optimization is crucial for real-time features
+- Data integrity is maintained through regular maintenance commands
